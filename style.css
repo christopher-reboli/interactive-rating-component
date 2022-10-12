@@ -1,0 +1,171 @@
+:root {
+	--white: hsl(0, 0%, 100%);
+	--lightGrey: hsl(217, 12%, 63%);
+	--mediumGrey: hsl(216, 12%, 54%);
+	--darkBlue: hsl(213, 19%, 18%);
+	--veryDarkBlue: hsl(216, 12%, 8%);
+	--orange: hsl(25, 97%, 53%);
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.5rem;
+	font-family: "Overpass", sans-serif;
+	font-weight: 300;
+	color: white;
+	background: var(--veryDarkBlue);
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+h1 {
+	margin-bottom: 1.5rem;
+}
+
+p {
+	margin-bottom: 3rem;
+}
+
+p:last-child {
+	margin-bottom: 1rem;
+}
+
+.rounded {
+	width: 4.2rem;
+	height: 4.2rem;
+	background: var(--darkBlue);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-bottom: 2rem;
+}
+
+.center {
+	text-align: center;
+}
+
+.star {
+	width: 1.5rem;
+}
+
+#main {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.feedback,
+.thank-you {
+	border-radius: 25px;
+	padding: 3rem 2rem;
+}
+
+.feedback {
+	display: block;
+	background: hsl(214, 19%, 15%);
+}
+
+.thank-you {
+	display: none;
+	background: hsl(214, 19%, 15%);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.thank-you-img {
+	width: 50%;
+}
+
+.rating-options {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}
+
+.rating-input {
+	display: none;
+}
+
+.rating-label {
+	background: var(--darkBlue);
+	transition: background 0.2s;
+}
+
+.rating-input:hover + .rating-label {
+	background: var(--mediumGrey);
+}
+
+.rating-input:checked + .rating-label {
+	background: var(--orange);
+}
+
+#submit {
+	width: 100%;
+	padding: 1em;
+	background: var(--orange);
+	border: none;
+	border-radius: 25px;
+	color: var(--white);
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	text-shadow: 1px 1px 15px black;
+	margin-top: 1rem;
+	transition: background 0.2s;
+}
+
+#submit:hover {
+	background: var(--white);
+	color: var(--orange);
+	text-shadow: none;
+}
+
+#rating {
+	margin: 2rem;
+	padding: 0.75rem 1.5rem;
+	border-radius: 25px;
+	background: var(--darkBlue);
+	color: var(--orange);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 376px) {
+	.feedback {
+		max-width: 375px;
+		padding: 3rem;
+	}
+	.thank-you {
+		max-width: 375px;
+		padding: 3rem;
+	}
+}

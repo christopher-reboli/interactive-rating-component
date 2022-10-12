@@ -18,7 +18,7 @@ ratingOptions.forEach((ratingOption) => {
 // Submits rating and shows the "Thank you" section
 submitButton.addEventListener("click", () => {
 	if (selected == undefined) {
-		alert("Please choose a note first!");
+		alert("Please choose a rating first!");
 	} else {
 		feedbackSection.style.display = "none";
 		thankYouSection.style.display = "flex";

@@ -113,6 +113,7 @@ p:last-child {
 .rating-label {
 	background: var(--darkBlue);
 	transition: background 0.2s;
+	cursor: pointer;
 }
 
 .rating-input:hover + .rating-label {
@@ -135,6 +136,7 @@ p:last-child {
 	text-shadow: 1px 1px 15px black;
 	margin-top: 1rem;
 	transition: background 0.2s;
+	cursor: pointer;
 }
 
 #submit:hover {
